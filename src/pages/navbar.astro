@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+---
+
+<aside class="navbar bg-gray-nav dark:bg-gray-700 h-full fixed top-0 left-0 w-64 z-10">
+  <div class="flex flex-col p-4">
+    <a href="#about" class="title-font font-medium text-black dark:text-white mb-4 ml-3 text-xl">
+      Pranav Dronavalli
+    </a>
+
+    <nav class="flex flex-col space-y-3">
+      <a href="#AboutMe" class="hover:text-white dark:hover:text-white">About Me</a>
+      <a href="#projects" class="hover:text-white dark:hover:text-white">Past Work</a>
+      <a href="#skills" class="hover:text-white dark:hover:text-white">Skills</a>
+      <a href="/resume.pdf" target="_blank" class="hover:text-white dark:hover:text-white">Resume</a>
+      <a href="/blog" class="hover:text-white dark:hover:text-white">Blog</a>
+
+      <div class="flex space-x-2">
+        <a href="https://github.com/dronavallipranav" target="_blank" rel="noopener noreferrer">
+          <img src="/gitBlack.svg" class="rounded-xl" height={28} width={28} />
+        </a>
+        <a href="https://www.linkedin.com/in/pranavdronavalli/" target="_blank" rel="noopener noreferrer">
+          <img src="./icons8-linkedin.svg" height={42} width={42} class="pl-2" />
+        </a>
+      </div>
+    </nav>
+  </div>
+</aside>

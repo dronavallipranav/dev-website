@@ -4,6 +4,7 @@ author: Pranav Dronavalli
 image: ppl.png
 date: March 2023
 slug: people-counter
+description: At the Undergrad Project Lab (UPL), we were faced with a common issue - students wanted to access the lab outside of set office hours, but they could only do so when a coordinator was present. 
 ---
 # Creating a People Counter for the UPL with YOLOv7 and Raspberry Pi
 
@@ -23,3 +24,4 @@ The Raspberry Pi was set up in the lab, and with the help of a basic usb camera 
 
 It's hard to gauge how much participation was increased but I have had members thank me for the project, so it is safe to say it has helped at least some people. The solution was incredibly simple as well as easy to implement. The problem wasn't incredibly important, and yet it was one of the more satisfying projects I have undertaken. I am now more enthusiastic about the possibility of working on similar projects in the future to enhance accessibility for everyone.
 
+![My Roommate!](/counter.jpeg)

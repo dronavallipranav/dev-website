@@ -4,6 +4,7 @@ author: Pranav Dronavalli
 image: trainerRed.jpg
 date: July 2023
 slug: gameboy-emulator
+description: Making an emulator was an idea I had in the back of my head for a while. I had used emulators in the past to play my favorite pokemon games on my phone. I had also recently taken a course on memory management
 ---
 
 # Building a GameBoy Emulator

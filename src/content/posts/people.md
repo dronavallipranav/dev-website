@@ -1,7 +1,7 @@
 ---
 title: People Counter
 author: Pranav Dronavalli
-image: ppl.png
+image: /ppl.png
 date: March 2023
 slug: people-counter
 description: At the Undergrad Project Lab (UPL), we were faced with a common issue - students wanted to access the lab outside of set office hours, but they could only do so when a coordinator was present. 

@@ -1,7 +1,7 @@
 ---
 title: My Portfolio Website Evolution
 author: Pranav Dronavalli
-image: HomePage.jpg
+image: /HomePage.jpg
 date: October 2022
 slug: portfolio-website
 description: About a year ago, I created my first-ever portfolio using React. A framework that has almost become synonymous with web dev in recent years. To the amateur web dev me, React was the holy grail of web development. Its flexibility

@@ -1,8 +1,6 @@
 ---
-import '../styles/global.css';
 import Navbar from '../components/navbar.astro';
-import About from "../components/About.astro";
-import Layout from "../layouts/Layout.astro";
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -14,7 +12,9 @@ import Layout from "../layouts/Layout.astro";
 		<title>Astro</title>
 	</head>
 	<Navbar></Navbar>
-</Layout>
-		<About></About>
-</Layout>
+	<body class="flex items-start justify-center h-screen md:w-[61%] bg-gray-50 ml-64 pt-10">
+        <div class="mx-auto prose pb-20">
+    <slot></slot>
+        </div>
+	</body>
 </html>

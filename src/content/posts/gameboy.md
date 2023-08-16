@@ -31,7 +31,7 @@ It was clear to me that I would need a modular and reusable codebase, something 
 
 ### Implementing Instructions
 
-With my project build and design set and the creation of my CPU state struct, I was finally ready to began implementing instructions. I knew this would be the meat of the project, and with my internship, I knew it was only feasible to finish a few sets of instructions a day. Regardless, I hunkered down and started incremental daily work.
+With my project build and design set and the creation of my CPU state struct, I was finally ready to began implementing instructions. I knew this would be the meat of the project, and with my internship, I knew it was only feasible to finish a few sets of instructions a day. Regardless, I hunkered down and started daily incremental work.
 
 ## July 17, 2023
 

@@ -2,9 +2,10 @@
 import Navbar from '../components/navbar.astro';
 import { getCollection } from "astro:content";
 let postEntries = await getCollection("posts");
+import Layout from '../layouts/Layout.astro';
 ---
+<Layout>
 <section id="blogs" class="ml-64 flex justify-center h-full overflow-x-hidden pt-5">
-  <Navbar></Navbar>
   <div class="container mx-auto flex justify-center">
     <div class="md:w-[61%] flex flex-col items-start px-4 pt-3 pb-3 space-y-3">
       <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
@@ -29,5 +30,6 @@ let postEntries = await getCollection("posts");
     </div>
   </div>
 </section>
+</Layout>
 
 

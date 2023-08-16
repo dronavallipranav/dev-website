@@ -1,6 +1,6 @@
 ---
 import {getCollection} from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 
 export async function getStaticPaths(){
     const posts = await getCollection("posts");
@@ -17,6 +17,6 @@ const { post } = Astro.props;
 const{Content, headings, remarkPluginFrontmatter} = await post.render();
 
 ---
-<Layout class="prose">
+<BlogLayout class="prose">
     <Content ></Content>
-</Layout>
+</BlogLayout>

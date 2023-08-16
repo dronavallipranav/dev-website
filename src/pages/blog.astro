@@ -4,9 +4,9 @@ let postEntries = await getCollection("posts");
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-<section id="blogs" class="ml-64 flex justify-center h-full overflow-x-hidden pt-5">
-  <div class="container mx-auto flex justify-center">
-    <div class="md:w-[60%] flex flex-col items-start pt-3 pb-3 space-y-3">
+<section id="blogs" class="flex overflow-x-hidden pt-5">
+  <div class="container mx-auto flex justify-center pb-20 text-lg leading-relaxed md:w-[80%] lg:w-[60%] flex-col items-start pt-3 space-y-3">
+    <div class="flex flex-col items-start pt-3 pb-3 space-y-3">
       <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
         My Blogs
       </h2>

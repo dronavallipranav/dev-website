@@ -11,9 +11,9 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Blog</title>
 	</head>
-	<body class="flex items-start justify-center h-screen md:w-[70%] bg-gray-50 ml-[18%] pt-5">
+	<body class="justify-center h-screen bg-gray-50 ml-[6%]">
 		<Navbar></Navbar>
-        <div class="mx-auto prose pb-20 text-lg leading-relaxed">
+        <div class="mx-auto prose pb-20 text-lg leading-relaxed md:w-[60%] flex flex-col items-start pt-3 space-y-3">
     <slot></slot>
         </div>
 	</body>

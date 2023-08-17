@@ -88,7 +88,7 @@ let postEntries = await getCollection("posts");
             <div class="w-2/3 p-6">
               <h3 class="text-xl font-semibold mb-2">{blog.data.title}</h3>
               <h2 class="text-lg font-semibold pb-1 mb-2">{blog.data.date}</h2>
-              <p class="text-gray-600 hidden lg:block">{blog.data.description}...</p>
+              <p class="text-gray-600 hidden lg:block">{blog.data.description}</p>
               <p class="text-gray-600 hidden md:block lg:hidden">{blog.data.description.substring(0, 100)}...</p>
               <p class="text-gray-600 hidden sm:block lg:hidden md:hidden">{blog.data.description.substring(0, 40)}...</p>
 

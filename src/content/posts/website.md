@@ -1,7 +1,7 @@
 ---
 title: My Portfolio Website Evolution
 author: Pranav Dronavalli
-image: /HomePage.jpg
+image: /website.jpeg
 date: October 2022
 slug: portfolio-website
 description: About a year ago, I created my first-ever portfolio using React. A framework that has almost become synonymous with web dev in recent years. To the amateur web dev me, React was the holy grail of web development. Its flexibility
@@ -14,9 +14,9 @@ description: About a year ago, I created my first-ever portfolio using React. A 
 ### My First Portfolio
 About a year ago, I created my first-ever portfolio using React. A framework that has almost become synonymous with web dev in recent years. To the amateur web dev me, React was the holy grail of web development. Its flexibility in offering the capability to build effective and interactive SPA's, coupled with a large community, really assured me of my choice. But there were a few pitfalls with my prior portfolio website.
 
-![Screenshot of my first portfolio](/HomePage.jpg)
+![Screenshot of my first portfolio](/website.jpeg)
 ![Another Image from my first portfolio](/BlogLanding.jpg)
-![Another image from my first portfolio](/Blog.jpg)
+![Another image from my first portfolio](/BlogPage.jpg)
 
 My previous portfolio website wasn't bad. These pictures were at the end of its lifecycle. The website was considerably worse when I first started out, but the incremental improvements helped build it into a little more feasible portfolio. It was simple and had all the essentials you would want in a portfolio. The problem was, it was kind of slow... It also had many unnecessary animations including an incredible amount of scrolling animations which probably didn't help with the speed. I also felt the design was a little lacking – too many things happening at once, and it just didn't match with the minimalist design I envisioned. With all that, I decided it was time for a V2.
 

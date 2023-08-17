@@ -17,6 +17,26 @@
     }
 }
 
+@media (max-width: 640px) {
+    aside.navbar {
+        width: 100%;
+        height: auto;
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        margin-top: 3.5rem;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+    body {
+        margin-top: 3.5rem;
+    }
+}
+
 aside.navbar.open {
-    transform: translateX(0);
+    transform: translateX(0) translateY(0);
 }

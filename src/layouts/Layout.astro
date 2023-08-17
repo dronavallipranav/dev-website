@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/navbar.astro';
 import '../styles/global.css';
+import Header from '../components/header.astro';
 ---
 
 <html lang="en">
@@ -11,8 +12,11 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>My Blogs</title>
 	</head>
-	<body class ="justify-center h-screen bg-gray-50 ml-[6%]">
+	<body class ="justify-center h-screen bg-gray-50">
 		<Navbar></Navbar>
+		<Header></Header>
+		<div class="content-container md:ml-[9%] sm:ml-[5%] lg:ml-[13%]">
     <slot></slot>
+</div>
 	</body>
 </html>

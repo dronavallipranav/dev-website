@@ -25,7 +25,7 @@ Before starting development on my GameBoy Emulator, I had decided to try emulati
 
 ### Making Design Choices
 
-It was clear to me that I would need a modular and reusable codebase, something commonly preached in the software world, but something that very few projects will truly force you to implement. I was able to design helper methods that generalized operations across the emulator by utilizing function pointers, which proved particularly useful for being able to read/write to CPU's state struct registers. This greatly generalized the load functions and any instruction that needs to use a register. I had also decided to use CMake to help automate the build process as my number of header and source files grew.
+It was clear to me that I would need a modular and reusable codebase, something commonly preached in the software world, but something that few personal projects will truly force you to implement. I was able to design helper methods that generalized operations across the emulator by utilizing function pointers, which proved particularly useful for being able to read/write to CPU's state struct registers. This greatly generalized the load functions and any instruction that needs to use a register. I had also decided to use CMake to help automate the build process as my number of header and source files grew.
 
 ## July 16, 2023
 

@@ -25,7 +25,7 @@ const subLetters = [...subheader];
                 ))}
             </span>
 
-            <img src="/mini.gif" alt="Sprite Animation created by PenZilla" class="ml-4 mt-1 fade-in-letter" style = {`animation-delay: ${(letters.length) * 0.1}s;`}/> 
+            <img src="/mini.gif" alt="Sprite Animation created by PenZilla" class="ml-3 mt-1 fade-in-item" style = {`animation-delay: ${(letters.length) * 0.1}s;`}/> 
         </h1>
 
         <h1 class="title-font m-0 sm:text-4xl text-3xl mb-4 font-medium text-black">
@@ -33,7 +33,7 @@ const subLetters = [...subheader];
                 {subLetters.map((letter,index) => (
                     <span
                         class="fade-in-letter"
-                        style={`animation-delay: ${(letters.length + index) * 0.1}s;`}
+                        style={`animation-delay: ${(letters.length + index) * 0.1 + 1}s;`}
                     >
                         {letter === ' ' ? '\u00A0' : letter}
                     </span>

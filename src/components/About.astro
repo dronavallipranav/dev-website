@@ -2,16 +2,45 @@
 import '../styles/global.css';
 import { getCollection } from "astro:content";
 let postEntries = await getCollection("posts");
+const text = "Hi, I'm Pranav.";
+const letters = [...text];
+const subheader = "Highly Caffeinated";
+const subLetters = [...subheader];
 ---
-<section id="about" class="flex justify-center overflow-x-hidden pt-5 items-start h-screen bg-gray-50 md:ml-[5%] sm:ml-[4%] lg:ml-[8%]">
+<section id="about" class="flex justify-center overflow-x-hidden pt-5 items-start h-screen md:ml-[5%] sm:ml-[4%] lg:ml-[8%]">
 
-    <div class="container mx-auto flex justify-center">
-        <div class="md:w-[60%] flex flex-col items-start pt-2 space-y-2"> 
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
-            Hi, I'm Pranav.
-            <br/>
-            <i>Highly Caffeinated</i>
-          </h1>
+  <div class="container mx-auto flex justify-center">
+    <div class="md:w-[60%] flex flex-col items-start pt-2 space-y-2"> 
+
+        <!-- Name with GIF -->
+        <h1 class="title-font m-0 sm:text-4xl text-3xl font-medium text-black flex items-center"> <!-- Made the h1 a flex container -->
+            <span class="flex flex-wrap">  <!-- Wrap letters to ensure they break correctly -->
+                {letters.map((letter, index) => (
+                    <span 
+                        class="fade-in-letter" 
+                        style={`animation-delay: ${index * 0.1}s;`}
+                    >
+                        {letter === ' ' ? '\u00A0' : letter} 
+                    </span>
+                ))}
+            </span>
+
+            <img src="/mini.gif" alt="Sprite Animation created by PenZilla" class="ml-4 mt-1 fade-in-letter" style = {`animation-delay: ${(letters.length) * 0.1}s;`}/> 
+        </h1>
+
+        <h1 class="title-font m-0 sm:text-4xl text-3xl mb-4 font-medium text-black">
+            <i>
+                {subLetters.map((letter,index) => (
+                    <span
+                        class="fade-in-letter"
+                        style={`animation-delay: ${(letters.length + index) * 0.1}s;`}
+                    >
+                        {letter === ' ' ? '\u00A0' : letter}
+                    </span>
+                ))}
+            </i>
+        </h1>
+
           <p class="leading-relaxed text-lg py-2">
             Junior at UW-Madison majoring in Computer Science and Mathematics. My hobbies include coding, reading, guitar (electric and classical), chess, volunteering, and video games.
             I love backend development but I dabble in full stack from time to time.
@@ -46,7 +75,7 @@ let postEntries = await getCollection("posts");
         </h2>
         
         <a href="https://github.com/dronavallipranav/GBEmulator" target="_blank" rel="noopener noreferrer" class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-            <div class="flex bg-gray-50 py-4 rounded overflow-hidden">
+            <div class="parallax flex bg-gray-50 py-4 rounded overflow-hidden">
         
                 <div class="w-1/3 border-r rounded-lg border-black border-2">
                     <img src="/gameboy.jpeg" alt="My GameBoy Emulator" class="w-full rounded-md h-full object-cover" />
@@ -60,7 +89,7 @@ let postEntries = await getCollection("posts");
         </a>
 
         <a href="https://www.madhacks.io/" target="_blank" rel="noopener noreferrer" class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-          <div class="flex bg-gray-50 py-4 rounded overflow-hidden">
+          <div class="parallax flex bg-gray-50 py-4 rounded overflow-hidden">
       
               <div class="w-1/3 border-r rounded-lg border-black border-2">
                   <img src="/madhacks2.jpeg" alt="MadHacks Website" class="w-full rounded-md h-full object-cover" />
@@ -74,12 +103,13 @@ let postEntries = await getCollection("posts");
       </a>
 
 
+
       <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
         Latest Blogs
       </h2>
       {postEntries.slice(0,2).map(blog => (
         <a href={`/posts/${blog.slug}`} class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-          <div class="flex bg-gray-50 py-4 rounded overflow-hidden">
+          <div class="flex parallax bg-gray-50 py-4 rounded overflow-hidden">
 
             <div class="w-1/3 border-r rounded-lg border-black border-2">
               <img src={blog.data.image} alt={blog.data.title} class="w-full rounded-md h-full object-cover" />
@@ -100,5 +130,4 @@ let postEntries = await getCollection("posts");
         </div>
     </div>
 </section>
-
 

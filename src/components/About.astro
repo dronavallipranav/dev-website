@@ -12,9 +12,9 @@ const subLetters = [...subheader];
   <div class="container mx-auto flex justify-center">
     <div class="md:w-[60%] flex flex-col items-start pt-2 space-y-2"> 
 
-        <!-- Name with GIF -->
-        <h1 class="title-font m-0 sm:text-4xl text-3xl font-medium text-black flex items-center"> <!-- Made the h1 a flex container -->
-            <span class="flex flex-wrap">  <!-- Wrap letters to ensure they break correctly -->
+        
+        <h1 class="title-font m-0 sm:text-4xl dark:text-opacity-80 text-3xl font-medium dark:text-titlePurple text-black flex items-center"> 
+            <span class="flex flex-wrap">  
                 {letters.map((letter, index) => (
                     <span 
                         class="fade-in-letter" 
@@ -28,7 +28,7 @@ const subLetters = [...subheader];
             <img src="/mini.gif" alt="Sprite Animation created by PenZilla" class="ml-3 mt-1 fade-in-item" style = {`animation-delay: ${(letters.length) * 0.1}s;`}/> 
         </h1>
 
-        <h1 class="title-font m-0 sm:text-4xl text-3xl mb-4 font-medium text-black">
+        <h1 class="title-font m-0 sm:text-4xl dark:text-opacity-80 text-3xl mb-4 font-medium dark:text-titlePurple text-black">
             <i>
                 {subLetters.map((letter,index) => (
                     <span
@@ -41,86 +41,86 @@ const subLetters = [...subheader];
             </i>
         </h1>
 
-          <p class="leading-relaxed text-lg py-2">
+          <p class="leading-relaxed dark:text-opacity-70 dark:text-gray-300 text-lg py-2">
             Junior at UW-Madison majoring in Computer Science and Mathematics. My hobbies include coding, reading, guitar (electric and classical), chess, volunteering, and video games.
             I love backend development but I dabble in full stack from time to time.
             I also love cats.
             <br>
           </p>
-          <p class="leading-relaxed text-left text-lg mb-6"> Born and raised in Overland Park, KS.
+          <p class="leading-relaxed text-left dark:text-opacity-70 dark:text-gray-300 text-lg mb-6"> Born and raised in Overland Park, KS.
             My passion for programming began about two years back after taking a software development and game design course in high school.
         </p>
-          <p class="leading-relaxed text-left text-lg mb-6"> 
+          <p class="leading-relaxed text-left dark:text-opacity-70 dark:text-gray-300 text-lg mb-6"> 
             Currently, I have been trying to broaden my horizons by learning more front-end dev as well as furthering my interests in systems programming.
         </p>
         <br>
-          <p class = "text-xl"> <b> Current Read: </b> <em>The Cambridge Companion to Plato</em> </p>
+          <p class = "text-xl dark:text-opacity-70 dark:text-gray-300"> <b> Current Read: </b> <em>The Cambridge Companion to Plato</em> </p>
           <div class="flex py-2">
             <a
               href="mailto:dronavallipranav@gmail.com"
-              class="inline-flex text-white bg-gray-700 border-0 py-2 px-6 focus:outline-none hover:bg-black rounded text-lg">
+              class="inline-flex text-white dark:bg-titlePurple dark:hover:bg-titlePurpleDark dark:text-gray-800 dark:text-opacity-90 bg-gray-700 border-0 py-2 px-6 focus:outline-none hover:bg-black rounded text-lg">
               Contact Me
             </a>
             <a
               href="/blog"
-              class="ml-4 inline-flex bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+              class="ml-4 inline-flex dark:bg-opacity-80 dark:bg-gray-300 border-0 py-2 px-6 dark:text-opacity-90 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
               All Blogs
             </a>
           </div>
           <div class="leading-relaxed lg:max-w-lg font-medium text-xl inline-flex bg-opacity-40 p-8 rounded py-2">
           </div>
 
-          <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
+          <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium dark:text-opacity-80 dark:text-gray-100 text-black py-2">
            Projects
         </h2>
         
         <a href="https://github.com/dronavallipranav/GBEmulator" target="_blank" rel="noopener noreferrer" class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-            <div class="parallax flex bg-gray-50 py-4 rounded overflow-hidden">
+            <div class="parallax flex dark:bg-containerGray bg-gray-50 px-2 py-4 rounded-xl overflow-hidden">
         
                 <div class="w-1/3 border-r rounded-lg border-black border-2">
                     <img src="/gameboy.jpeg" alt="My GameBoy Emulator" class="w-full rounded-md h-full object-cover" />
                 </div>
         
                 <div class="w-2/3 p-6">
-                    <h3 class="text-xl font-semibold mb-2">GameBoy Emulator - <b>IN PROGRESS</b></h3>
-                    <p class="text-gray-600">Take a look at the current state of my Emulator</p>
+                    <h3 class="text-xl dark:text-titlePurple dark:text-opacity-80 font-semibold mb-2">GameBoy Emulator - <b class = "dark:text-opacity-80 dark:text-gray-100">IN PROGRESS</b></h3>
+                    <p class="text-gray-600 dark:text-gray-400 dark:text-opacity:70 ">Take a look at the current state of my Emulator</p>
                 </div>
             </div>
         </a>
 
-        <a href="https://www.madhacks.io/" target="_blank" rel="noopener noreferrer" class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-          <div class="parallax flex bg-gray-50 py-4 rounded overflow-hidden">
+        <a href="https://www.madhacks.io/" target="_blank" rel="noopener noreferrer" class="block mb-8 ">
+          <div class="transition-transform shadow-lg hover:shadow-xl duration-300 ease-in-out rounded-xl transform hover:scale-105 flex dark:bg-containerGray bg-gray-50 px-2 py-4 mt-3 rounded overflow-hidden">
       
               <div class="w-1/3 border-r rounded-lg border-black border-2">
                   <img src="/madhacks2.jpeg" alt="MadHacks Website" class="w-full rounded-md h-full object-cover" />
               </div>
       
               <div class="w-2/3 p-6">
-                  <h3 class="text-xl font-semibold mb-2">MadHacks Website - <b>IN PROGRESS</b></h3>
-                  <p class="text-gray-600">Our temporary website currently in place for MadHacks</p>
+                  <h3 class="text-xl dark:text-opacity-80 dark:text-titlePurple font-semibold mb-2">MadHacks Website - <b class = "dark:text-opacity-80 dark:text-gray-100">IN PROGRESS</b></h3>
+                  <p class="text-gray-600 dark:text-gray-400 dark:text-opacity:70 ">Our temporary website currently in place for MadHacks</p>
               </div>
           </div>
       </a>
 
 
 
-      <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
+      <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
         Latest Blogs
       </h2>
       {postEntries.slice(0,2).map(blog => (
         <a href={`/posts/${blog.slug}`} class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-          <div class="flex parallax bg-gray-50 py-4 rounded overflow-hidden">
+          <div class="flex parallax dark:bg-containerGray px-2 bg-gray-50 py-4 mt-3 rounded-xl overflow-hidden">
 
             <div class="w-1/3 border-r rounded-lg border-black border-2">
               <img src={blog.data.image} alt={blog.data.title} class="w-full rounded-md h-full object-cover" />
             </div>
 
             <div class="w-2/3 p-6">
-              <h3 class="text-xl font-semibold mb-2">{blog.data.title}</h3>
-              <h2 class="text-lg font-semibold pb-1 mb-2">{blog.data.date}</h2>
-              <p class="text-gray-600 hidden lg:block">{blog.data.description}</p>
-              <p class="text-gray-600 hidden md:block lg:hidden">{blog.data.description.substring(0, 100)}...</p>
-              <p class="text-gray-600 hidden sm:block lg:hidden md:hidden">{blog.data.description.substring(0, 40)}...</p>
+              <h3 class="text-xl font-semibold dark:text-opacity-80 dark:text-titlePurple mb-2">{blog.data.title}</h3>
+              <h2 class="text-lg font-semibold pb-1 mb-2 dark:text-opacity-80 dark:text-gray-200">{blog.data.date}</h2>
+              <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden lg:block">{blog.data.description}</p>
+              <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden md:block lg:hidden">{blog.data.description.substring(0, 100)}...</p>
+              <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden sm:block lg:hidden md:hidden">{blog.data.description.substring(0, 40)}...</p>
 
             </div>
           </div>

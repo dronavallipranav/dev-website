@@ -7,23 +7,23 @@ import Layout from '../layouts/Layout.astro';
 <section id="blogs" class="flex overflow-x-hidden pt-5">
   <div class="container mx-auto flex justify-center pb-20 text-lg leading-relaxed md:w-[80%] lg:w-[60%] flex-col items-start pt-3 space-y-3">
     <div class="flex flex-col items-start pt-3 pb-3 space-y-3">
-      <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
+      <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
         My Blogs
       </h2>
       {postEntries.map(blog => (
         <a href={`/posts/${blog.slug}`} class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-          <div class="flex bg-gray-50 py-4 rounded overflow-hidden">
+          <div class="flex bg-gray-50 dark:bg-containerGray py-4 px-2 pt-3 rounded-xl overflow-hidden">
 
             <div class="w-1/3 border-r rounded-lg border-black border-2">
-              <img src={blog.data.image} alt={blog.data.title} class="w-full rounded-md h-full object-cover" />
+              <img src={blog.data.image} alt={blog.data.title} class="w-full rounded-lg h-full object-cover" />
             </div>
 
             <div class="w-2/3 p-6">
-              <h3 class="text-xl font-semibold mb-2">{blog.data.title}</h3>
-              <h2 class="text-lg font-semibold pb-1 mb-2">{blog.data.date}</h2>
-              <p class="text-gray-600 hidden lg:block">{blog.data.description}</p>
-              <p class="text-gray-600 hidden md:block lg:hidden">{blog.data.description.substring(0, 100)}...</p>
-              <p class="text-gray-600 hidden sm:block lg:hidden md:hidden">{blog.data.description.substring(0, 40)}...</p>
+              <h3 class="dark:text-titlePurple dark:text-opacity:80 text-xl font-semibold mb-2">{blog.data.title}</h3>
+              <h2 class="dark:text-gray-200 dark:text-opacity:80 text-lg font-semibold pb-1 mb-2">{blog.data.date}</h2>
+              <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden lg:block">{blog.data.description}</p>
+              <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden md:block lg:hidden">{blog.data.description.substring(0, 100)}...</p>
+              <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden sm:block lg:hidden md:hidden">{blog.data.description.substring(0, 40)}...</p>
             </div>
           </div>
         </a>

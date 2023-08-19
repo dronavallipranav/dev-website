@@ -40,11 +40,16 @@ import '../styles/global.css';
 			}
 		</script>
 	</head>
-	<body class="justify-center h-screen bg-gray-50">
+	<body class="dark:dark justify-center h-screen dark:bg-customGray bg-gray-50">
 		<Header></Header>
 		<Navbar></Navbar>
-        <div class="mx-auto prose pb-20 text-lg lg:ml-[30%] leading-relaxed md:w-[60%] flex flex-col items-start pt-3 space-y-3">
+        <div class="mx-auto blog-post prose pb-20 text-lg dark:text-gray-200 dark:text-opacity-70 lg:ml-[30%] leading-relaxed md:w-[60%] flex flex-col items-start pt-3 space-y-3">
     <slot></slot>
         </div>
+		<script>
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			  document.body.classList.add('dark');
+			}
+		  </script>
 	</body>
 </html>

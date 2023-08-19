@@ -8,7 +8,6 @@ description: About a year ago, I created my first-ever portfolio using React. A 
 ---
 
 # My Portfolio Website Evolution
-
 ## August 14, 2023
 
 ### My First Portfolio

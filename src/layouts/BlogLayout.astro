@@ -4,7 +4,7 @@ import Navbar from '../components/navbar.astro';
 import '../styles/global.css';
 ---
 
-<html lang="en">
+<html lang="en" class ="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -37,6 +37,16 @@ import '../styles/global.css';
 				"@type": "Organization",
 				"name": "Entegral"
 			  }  
+			}
+		</script>
+		<script is:inline>
+			const storedTheme = localStorage.getItem('theme-mode');
+			const htmlElement = document.documentElement;
+
+			if (storedTheme === 'light') {
+				htmlElement.classList.remove('dark');
+			} else {
+				htmlElement.classList.add('dark');
 			}
 		</script>
 	</head>

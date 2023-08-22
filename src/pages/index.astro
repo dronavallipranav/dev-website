@@ -6,7 +6,7 @@ import About from "../components/About.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en" class = "dark:bg-customGray">
+<html lang="en" class = "dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -39,6 +39,16 @@ import Layout from "../layouts/Layout.astro";
 				"name": "Entegral"
 			  }  
 			}
+			</script>
+			<script is:inline>
+    			const storedTheme = localStorage.getItem('theme-mode');
+    			const htmlElement = document.documentElement;
+
+    			if (storedTheme === 'light') {
+        			htmlElement.classList.remove('dark');
+    			} else {
+        			htmlElement.classList.add('dark');
+    			}
 			</script>
 		<title>Pranav Dronavalli</title>
 	</head>

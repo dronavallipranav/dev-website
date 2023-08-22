@@ -7,7 +7,7 @@ import Header from '../components/header.astro';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content="Pranav Dronavalli's Portfolio Website">
@@ -43,8 +43,9 @@ import Header from '../components/header.astro';
 	<body class ="justify-center dark:bg-customGray bg-gray-50 h-screen">
 		<Navbar></Navbar>
 		<Header></Header>
-		<div class="content-container md:ml-[9%] sm:ml-[5%] lg:ml-[13%]">
+		<div class="content-container md:ml-[9%] sm:px-4 md:px-2 sm:ml-[5%] lg:ml-[13%]">
     <slot></slot>
 </div>
+
 	</body>
 </html>

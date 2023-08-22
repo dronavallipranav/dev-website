@@ -7,7 +7,7 @@ import '../styles/global.css';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Blog</title>
@@ -46,10 +46,5 @@ import '../styles/global.css';
         <div class="mx-auto blog-post prose pb-20 text-lg dark:text-gray-200 dark:text-opacity-70 lg:ml-[30%] leading-relaxed md:w-[60%] flex flex-col items-start pt-3 space-y-3">
     <slot></slot>
         </div>
-		<script>
-			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			  document.body.classList.add('dark');
-			}
-		  </script>
 	</body>
 </html>

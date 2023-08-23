@@ -11,6 +11,7 @@ export default {
         titlePurple: '#BB86FC',
         titlePurpleDark: '#A675E2',
         containerGray: '#1F1A24',
+        byz: "#AA336A",
         boxShadow: {
           'purple-lg': '0 10px 20px -5px rgba(187, 134, 252, 0.8), 0 6px 10px -2px rgba(187, 134, 252, 0.6)',
         },

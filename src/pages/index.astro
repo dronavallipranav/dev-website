@@ -40,16 +40,6 @@ import Layout from "../layouts/Layout.astro";
 			  }  
 			}
 			</script>
-			<script is:inline>
-    			const storedTheme = localStorage.getItem('theme-mode');
-    			const htmlElement = document.documentElement;
-
-    			if (storedTheme === 'light') {
-        			htmlElement.classList.remove('dark');
-    			} else {
-        			htmlElement.classList.add('dark');
-    			}
-			</script>
 		<title>Pranav Dronavalli</title>
 	</head>
 <body class = "dark:bg-customGray bg-gray-50">

@@ -39,16 +39,6 @@ import '../styles/global.css';
 			  }  
 			}
 		</script>
-		<script is:inline>
-			const storedTheme = localStorage.getItem('theme-mode');
-			const htmlElement = document.documentElement;
-
-			if (storedTheme === 'light') {
-				htmlElement.classList.remove('dark');
-			} else {
-				htmlElement.classList.add('dark');
-			}
-		</script>
 	</head>
 	<body class="dark:dark justify-center h-screen dark:bg-customGray bg-gray-50">
 		<Header></Header>

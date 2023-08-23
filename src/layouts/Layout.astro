@@ -38,16 +38,6 @@ import Header from '../components/header.astro';
 			  }  
 			}
 			</script>
-			<script is:inline>
-    			const storedTheme = localStorage.getItem('theme-mode');
-    			const htmlElement = document.documentElement;
-
-    			if (storedTheme === 'light') {
-        			htmlElement.classList.remove('dark');
-    			} else {
-        			htmlElement.classList.add('dark');
-    			}
-			</script>
 		<title>My Blogs</title>
 	</head>
 	<body class ="justify-center dark:bg-customGray bg-gray-50 h-screen">

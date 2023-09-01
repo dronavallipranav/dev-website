@@ -47,11 +47,16 @@ const subLetters = [...subheader];
             I also love cats.
             <br>
           </p>
-          <p class="leading-relaxed text-left dark:text-opacity-70 dark:text-gray-300 text-lg mb-6"> Born and raised in Overland Park, KS.
-            My passion for programming began about two years back after taking a software development and game design course in high school.
-        </p>
           <p class="leading-relaxed text-left dark:text-opacity-70 dark:text-gray-300 text-lg mb-6"> 
-            Currently, I have been trying to broaden my horizons by learning more front-end dev as well as furthering my interests in systems programming.
+            My passion for programming began about two years back after taking a software development and game design course in high school. I find many different aspects of technology exciting
+            including, but not limited to: Systems Programming, ML models, Cybersecurity, Front-end Frameworks, etc. and have done a multitude of projects across my wide breadth of growing interests.
+        
+        </p>
+        
+          <p class="leading-relaxed text-left dark:text-opacity-70 dark:text-gray-300 text-lg mb-6"> 
+            Oftentimes, if I am interested enough, I'll start a personal project in an area of Computer Science before I take related coursework on the subject. This makes projects much more difficult but
+            all the more fulfullfing.
+            Currently, I have been trying to broaden my horizons by learning more front-end dev as well as furthering my interests in systems programming by learning more OS.
         </p>
         <br>
           <p class = "text-xl dark:text-opacity-70 dark:text-gray-300"> <b> Current Read: </b> <em>The Cambridge Companion to Plato</em> </p>
@@ -127,40 +132,5 @@ const subLetters = [...subheader];
         </a>
       ))}
     
-        </div>
-        <input type="text" id="userQuestion" placeholder="Ask a question..." />
-        <button id="askButton">Ask</button>
-    </div>
-    <script>
-      async function askQuestion(question) {
-          const response = await fetch('/.netlify/functions/ask', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({ question: question })
-          });
-  
-          if (response.ok) {
-              const data = await response.json();
-              return data.answer;
-          } else {
-              const errorData = await response.json();
-              throw new Error(errorData.error);
-          }
-      }
-  
-      document.getElementById('askButton').addEventListener('click', async () => {
-          const userQuestion = document.getElementById('userQuestion').value;
-  
-          try {
-              const answer = await askQuestion(userQuestion);
-              alert(answer);
-          } catch (error) {
-              console.error(error);
-              alert("Failed to get an answer.");
-          }
-      });
-  </script>
 </section>
 

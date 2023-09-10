@@ -7,7 +7,7 @@ const letters = [...text];
 const subheader = "Highly Caffeinated";
 const subLetters = [...subheader];
 ---
-<section id="about" class="flex justify-center overflow-x-hidden pt-5 items-start h-screen md:ml-[5%] sm:ml-[4%] lg:ml-[8%]">
+<section id="about" class="flex justify-center overflow-x-hidden pb-16 pt-5 items-start h-screen md:ml-[5%] sm:ml-[4%] lg:ml-[8%]">
 
   <div class="container mx-auto flex justify-center">
     <div class="md:w-[60%] flex flex-col items-start pt-2 space-y-2"> 
@@ -132,25 +132,35 @@ const subLetters = [...subheader];
         </a>
       ))}
   
+  <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
+    PranavBot V1
+  </h2>
+
+  <div 
+      class="block w-full max-w-2xl mb-8 mt-4 shadow-lg transform transition-transform duration-300"
+  >
+    <div class="flex dark:bg-containerGray bg-gray-50 px-2 py-4 mt-4 mb-2 rounded-xl overflow-hidden">
+        <div class="w-full p-6">
+            <h3 class="text-xl font-semibold dark:text-opacity-80 dark:text-titlePurple mb-2">PranavBot:</h3>
+            <p class="text-lg dark:text-opacity-70 dark:text-gray-300">
+                <span id="langchain-text">Ask me anything about Pranav, and I'll assist you to the best of my capability!</span>
+            </p>
+        </div>
+    </div>
+  </div>
+  
   <div class="w-full max-w-2xl">
     <input 
       id="user-question" 
-      class="w-full border rounded-md p-2" 
+      class="w-full border dark:bg-containerGray dark:text-gray-200 dark:text-opacity-90 rounded-md p-2" 
       type="text" 
       placeholder="Ask PranavBot..."
     >
   </div>
   
-  <div id="langchain-response" class="w-full max-w-2xl p-4 border border-gray-300 rounded-md hidden">
-    <p class="text-lg dark:text-opacity-70 dark:text-gray-300">
-      PranavBot:<br> 
-      <span id="langchain-text"></span>
-    </p>
-  </div>
-
   <button 
     id="fetch-langchain-response" 
-    class="text-lg px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition-transform duration-300 ease-in-out transform shadow-lg hover:shadow-xl"
+    class="text-lg px-6 py-2 bg-gray-700 text-white rounded-md mt-2 hover:bg-gray-800 py-2 dark:bg-byz dark:hover:bg-containerGray dark:hover:text-white dark:text-white dark:text-opacity-90 transition-transform duration-300 ease-in-out transform shadow-lg hover:shadow-xl mt-4"
   >
     Ask Anything About Me
   </button>

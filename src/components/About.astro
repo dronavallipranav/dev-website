@@ -131,6 +131,68 @@ const subLetters = [...subheader];
           </div>
         </a>
       ))}
+  
+  <div class="w-full max-w-2xl">
+    <input 
+      id="user-question" 
+      class="w-full border rounded-md p-2" 
+      type="text" 
+      placeholder="Ask PranavBot..."
+    >
+  </div>
+  
+  <div id="langchain-response" class="w-full max-w-2xl p-4 border border-gray-300 rounded-md hidden">
+    <p class="text-lg dark:text-opacity-70 dark:text-gray-300">
+      PranavBot:<br> 
+      <span id="langchain-text"></span>
+    </p>
+  </div>
+
+  <button 
+    id="fetch-langchain-response" 
+    class="text-lg px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition-transform duration-300 ease-in-out transform shadow-lg hover:shadow-xl"
+  >
+    Ask Anything About Me
+  </button>
+
+
+
+</div>
+</div>
+    <script>
+    document.getElementById('fetch-langchain-response').addEventListener('click', async () => {
+      const question = document.getElementById('user-question').value;
+      
+      if (!question) {
+        alert('Please enter a question.');
+        return;
+      }
     
+      const requestData = {
+        question: question
+      };
+    
+      try {
+        const response = await fetch('/.netlify/functions/askquestion', { 
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(requestData)
+});
+
+    
+        if (response.ok) {
+          const data = await response.json();
+          document.getElementById('langchain-text').textContent = data.text;
+          document.getElementById('langchain-response').classList.remove('hidden');
+        } else {
+          console.error("Error fetching langchain response:", await response.text());
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    });
+    </script>
 </section>
 

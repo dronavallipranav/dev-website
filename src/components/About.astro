@@ -185,8 +185,8 @@ const subLetters = [...subheader];
       };
     
       try {
-        const response = await fetch("https://jtd1lexbk4.execute-api.us-east-2.amazonaws.com/default", { 
-    httpMethod: 'POST',
+        const response = await fetch("https://jtd1lexbk4.execute-api.us-east-2.amazonaws.com/default/askContainer", {
+    method: 'POST',
     headers: {
         'Content-Type': 'application/json'
     },

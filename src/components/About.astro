@@ -185,8 +185,8 @@ const subLetters = [...subheader];
       };
     
       try {
-        const response = await fetch('/.netlify/functions/askquestion', { 
-    method: 'POST',
+        const response = await fetch("https://jtd1lexbk4.execute-api.us-east-2.amazonaws.com/default", { 
+    httpMethod: 'POST',
     headers: {
         'Content-Type': 'application/json'
     },

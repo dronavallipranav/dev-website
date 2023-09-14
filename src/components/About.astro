@@ -147,6 +147,9 @@ const subLetters = [...subheader];
             <p class="text-lg dark:text-opacity-70 dark:text-gray-300">
                 <span id="langchain-text">Ask me anything about Pranav, and I'll assist you to the best of my capability!</span>
             </p>
+            <div id="loading-div" class="hidden w-12 h-12">
+              <img src="load.gif" alt="Loading..." />
+            </div>
         </div>
     </div>
   </div>
@@ -179,6 +182,9 @@ const subLetters = [...subheader];
         alert('Please enter a question.');
         return;
       }
+
+      document.getElementById('langchain-text').textContent = "";
+      document.getElementById('loading-div').classList.remove('hidden');
     
       const requestData = {
         question: question
@@ -196,6 +202,7 @@ const subLetters = [...subheader];
     
         if (response.ok) {
           const data = await response.json();
+          document.getElementById('loading-div').classList.add('hidden');
           document.getElementById('langchain-text').textContent = data.text;
           document.getElementById('langchain-response').classList.remove('hidden');
         } else {

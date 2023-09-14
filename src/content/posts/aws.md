@@ -11,7 +11,7 @@ description: What inspired me to migrate from Netlify to AWS. The challnges I fa
 
 ## The Problem
 
-The need for migration all started when I was simply building a chatbot about myself with a serverless backend using Netlify's serverless functions. The backend worked fine locally, but when I tried to deploy my site, I kept getting an error on Netlify’s build process: "maximum call stack exceeded". After doing some research online, I figured out it was either a recursive element in my code or possibly an issue with a dependency, maybe some circular dependency issue (hint hint).
+The need for migration all started when I was building a chatbot about myself using Netlify's serverless functions. The backend worked fine locally, but when I tried to deploy my site, I kept getting an error on Netlify’s build process: "maximum call stack exceeded". After doing some research online, I figured out it was either a recursive element in my code or possibly an issue with a dependency, maybe some circular dependency issue (hint hint).
 
 I made a post on Netlify's forums to ask for help with the bug. While they acknowledged the issue, a solution wasn’t immediately available. I knew Netlify's serverless functions were built on AWS Lambda, and so I decided that this might be a good time to migrate to AWS. I thought I'd be able to fix this problem myself and get more detailed error logs on the issue I was facing. Little did I know, it would be much more difficult than I orginally imagined.
 

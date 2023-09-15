@@ -22,28 +22,26 @@
 
 <script is:inline>
     const theme = (() => {
-      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme-mode')) {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme-mode')) {
         return localStorage.getItem('theme-mode');
-      }else {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-    })();
-  
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+        return 'light';
     }
-  
-    window.localStorage.setItem('theme-mode', theme);
-  
-    const handleToggleClick = () => {
-      const element = document.documentElement;
-      element.classList.toggle("dark");
-  
-      const isDark = element.classList.contains("dark");
-      localStorage.setItem("theme-mode", isDark ? "dark" : "light");
-    }
-  
-    document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
+})();
+
+if (theme === 'dark') {
+    document.documentElement.classList.add('dark');
+}
+
+window.localStorage.setItem('theme-mode', theme);
+
+const handleToggleClick = () => {
+    const element = document.documentElement;
+    element.classList.toggle("dark");
+
+    const isDark = element.classList.contains("dark");
+    localStorage.setItem("theme-mode", isDark ? "dark" : "light");
+}
+
+document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
   </script>

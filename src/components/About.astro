@@ -132,7 +132,7 @@ const subLetters = [...subheader];
         </a>
       ))}
   
-  <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 sm:text-4xl text-3xl mb-4 font-medium text-black pt-2">
+  <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 mt-2 sm:text-4xl text-3xl mb-4 font-medium text-black pt-2">
     PranavBot V1
   </h2>
   <h4 class="title-font dark:text-gray-100 dark:text-opacity-80 sm:text-xl text-lg mb-4 font-medium text-black">
@@ -152,16 +152,23 @@ const subLetters = [...subheader];
             </div>
         </div>
     </div>
-  </div>
+
   
-  <div class="w-full max-w-2xl">
-    <input 
-      id="user-question" 
-      class="w-full border dark:bg-containerGray dark:text-gray-200 dark:text-opacity-90 rounded-md p-2" 
-      type="text" 
-      placeholder="Ask PranavBot..."
-    >
+<div class="chat-bubble w-full">
+  <div class="chat-bubble-content">
+    <div class="flex items-center mt-2 mb-2 space-x-2">
+      <div class="w-10 h-10 ml-2 rounded-full bg-gray-50 dark:bg-customGray"><img src = "/robot.png"></div>
+      <input 
+        id="user-question" 
+        class="w-full border dark:bg-containerGray  dark:text-gray-200 dark:text-opacity-90 rounded-md p-2" 
+        type="text" 
+        placeholder="What does Pranav like?"
+      >
+    </div>
   </div>
+</div>
+</div>
+
   
   <button 
     id="fetch-langchain-response" 

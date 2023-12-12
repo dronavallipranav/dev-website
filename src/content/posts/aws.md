@@ -17,7 +17,7 @@ I created a ticket on Neltify Support to ask for help with the bug. While they a
 
 ## AWS Lambda and hnswlib-node
 
-My backend was having trouble with Lambda, even though I had the hnswlib-node package installed and uploaded, my code was having trouble importing the package in the Lambda environment. After doing research on the topic, I found some people having common issues on github and the issues weren't yet closed meaning that there wasn't one verified solution to the problem. It did seem like Amazon was aware of this issue and an issue with the Faiss library and aim to add support on Lambda to these problems. 
+My backend was having trouble with Lambda, even though I had the hnswlib-node package installed and uploaded, my code was having trouble importing the package in the Lambda environment. After doing research on the topic, I found some people having common issues on github and the issues weren't yet closed meaning that there wasn't one verified solution to the problem. It did seem like Amazon was aware of this issue and an issue with the Faiss library aswell and aim to add support on Lambda to eventually problems. 
 
 My theory after learning a little more is that the the natively compiled hnswlib-node binary not working seamlessly with AWS Lambda, despite using the same X86 ISA and the same Node runtime. I did manage to find a workaround to the issue through containzering my backend on ECR and using Lambda to execute the image. 
 

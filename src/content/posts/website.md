@@ -11,7 +11,7 @@ description: About a year ago, I created my first-ever portfolio using React. A 
 ## August 14, 2023
 
 ### My First Portfolio
-About a year ago, I created my first-ever portfolio using React. A framework that has almost become synonymous with web dev in recent years. To the amateur web dev me, React was the holy grail of web development. Its flexibility in offering the capability to build effective and interactive SPA's, coupled with a large community, really assured me of my choice. But there were a few pitfalls with my prior portfolio website.
+About a year ago, I created my first-ever portfolio using React. A library that has almost become synonymous with web dev in recent years. To the amateur web dev me, React was the holy grail of web development. Its flexibility in offering the capability to build effective and interactive SPA's, coupled with a large community, really assured me of my choice. But there were a few pitfalls with my prior portfolio website.
 
 ![Screenshot of my first portfolio](/website.jpeg)
 ![Another Image from my first portfolio](/BlogLanding.jpg)

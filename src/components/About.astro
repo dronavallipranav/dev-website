@@ -6,6 +6,7 @@ const text = "Hi, I'm Pranav.";
 const letters = [...text];
 const subheader = "Highly Caffeinated";
 const subLetters = [...subheader];
+import projects from '../data/projects.js';
 ---
 <section id="about" class="flex justify-center overflow-x-hidden pb-16 pt-5 items-start h-screen md:ml-[5%] sm:ml-[4%] lg:ml-[8%]">
 
@@ -75,40 +76,27 @@ const subLetters = [...subheader];
           <div class="leading-relaxed lg:max-w-lg font-medium text-xl inline-flex bg-opacity-40 p-8 rounded py-2">
           </div>
 
-          <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium dark:text-opacity-80 dark:text-gray-100 text-black py-2">
+          <h2 class="title-font sm:text-4xl text-3xl mb-8 font-medium dark:text-opacity-80 dark:text-gray-100 text-black py-2">
            Projects
         </h2>
         
-        <a href="https://github.com/dronavallipranav/GBEmulator" target="_blank" rel="noopener noreferrer" class="block mb-8 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-            <div class="parallax flex dark:bg-containerGray bg-gray-50 px-2 py-4 rounded-xl overflow-hidden">
-        
-                <div class="w-1/3 border-r rounded-lg border-black border-2">
-                    <img src="/gameboy.jpeg" alt="My GameBoy Emulator" class="w-full rounded-md h-full object-cover" />
-                </div>
-        
-                <div class="w-2/3 p-6">
-                    <h3 class="text-xl dark:text-titlePurple dark:text-opacity-80 font-semibold mb-2">GameBoy Emulator - <b class = "dark:text-opacity-80 dark:text-gray-100">IN PROGRESS</b></h3>
-                    <p class="text-gray-600 dark:text-gray-400 dark:text-opacity:70 ">Take a look at the current state of my Emulator</p>
-                </div>
-            </div>
-        </a>
 
-        <a href="https://www.madhacks.io/" target="_blank" rel="noopener noreferrer" class="block mb-8 ">
-          <div class="transition-transform shadow-lg hover:shadow-xl duration-300 ease-in-out rounded-xl transform hover:scale-105 flex dark:bg-containerGray bg-gray-50 px-2 py-4 mt-3 rounded overflow-hidden">
-      
+<div>
+  {projects.map(project => (
+      <a href={project.link} target="_blank" rel="noopener noreferrer" class="block mb-6 shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
+          <div class="parallax flex dark:bg-containerGray bg-gray-50 px-2 py-4 rounded-xl overflow-hidden">
               <div class="w-1/3 border-r rounded-lg border-black border-2">
-                  <img src="/madhacks2.jpeg" alt="MadHacks Website" class="w-full rounded-md h-full object-cover" />
+                  <img src={project.image} alt={project.title} class="w-full rounded-md h-full object-cover"/>
               </div>
-      
               <div class="w-2/3 p-6">
-                  <h3 class="text-xl dark:text-opacity-80 dark:text-titlePurple font-semibold mb-2">MadHacks Website - <b class = "dark:text-opacity-80 dark:text-gray-100">IN PROGRESS</b></h3>
-                  <p class="text-gray-600 dark:text-gray-400 dark:text-opacity:70 ">Our temporary website currently in place for MadHacks</p>
+                  <h3 class="text-xl dark:text-titlePurple dark:text-opacity-80 font-semibold mb-2">{project.title} <b class="dark:text-opacity-80 dark:text-gray-100">{project.status}</b></h3>
+                  <p class="text-gray-600 dark:text-gray-400 dark:text-opacity:70">{project.description}</p>
               </div>
           </div>
       </a>
-
-
-
+  ))}
+      </div>
+      
       <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 sm:text-4xl text-3xl mb-4 font-medium text-black py-2">
         Latest Blogs
       </h2>

@@ -1,9 +1,9 @@
 let projects = [
   {
-    title: "Rust Obfuscator - ",
-    status: "IN PROGRESS",
+    title: "Rust Obfuscator",
+    status: "",
     description:
-      "creating a open source obfuscator for Rust, currently have variable renaming for shipped source code, working on string literal encryption and code flow obfuscation",
+      "open source automatic rust obfuscator and procedural macro library for fine-grained control",
     image: "/rustacean.jpg",
   },
   {

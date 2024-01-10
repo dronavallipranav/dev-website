@@ -5,6 +5,7 @@ let projects = [
     description:
       "open source automatic rust obfuscator and procedural macro library for fine-grained control",
     image: "/rustacean.jpg",
+    link: "https://github.com/dronavallipranav/rust-obfuscator",
   },
   {
     title: "GameBoy Emulator - ",

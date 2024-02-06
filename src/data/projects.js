@@ -8,6 +8,14 @@ let projects = [
     link: "https://github.com/dronavallipranav/rust-obfuscator",
   },
   {
+    title: "Low Elo Chess",
+    status: "",
+    description:
+      "a terribly mediocre attempt at a low elo chess engine written in Go",
+    image: "/dumbChess.jpg",
+    link: "https://github.com/dronavallipranav/dumb-chess",
+  },
+  {
     title: "GameBoy Emulator - ",
     description: "Take a look at the current state of my Emulator",
     status: "IN PROGRESS",

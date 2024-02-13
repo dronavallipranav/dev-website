@@ -8,8 +8,8 @@
   "author": "",
   "type": "module",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "langchain": "^0.0.142"
-  },
-  "description": ""
+    "langchain": "^0.1.17"
+  }
 }

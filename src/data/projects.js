@@ -1,5 +1,13 @@
 let projects = [
   {
+    title: "Swapper",
+    status: "",
+    description:
+      "platform for item exchange and reducing waste by connecting people with items they need -- 1st place at DeveloperWeek 2024 (2k+ particpants)",
+    image: "/swap.png",
+    link: "https://devpost.com/software/swapper-8u4rq0",
+  },
+  {
     title: "Rust Obfuscator",
     status: "",
     description:

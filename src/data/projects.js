@@ -8,20 +8,20 @@ let projects = [
     link: "https://devpost.com/software/swapper-8u4rq0",
   },
   {
-    title: "Rust Obfuscator",
-    status: "",
-    description:
-      "open source automatic rust obfuscator and procedural macro library for fine-grained control",
-    image: "/rustacean.jpg",
-    link: "https://github.com/dronavallipranav/rust-obfuscator",
-  },
-  {
     title: "Low Elo Chess",
     status: "",
     description:
       "a terribly mediocre attempt at a low elo chess engine written in Go",
     image: "/dumbChess.jpg",
     link: "https://github.com/dronavallipranav/dumb-chess",
+  },
+  {
+    title: "Rust Obfuscator",
+    status: "",
+    description:
+      "open source automatic rust obfuscator and procedural macro library for fine-grained control",
+    image: "/rustacean.jpg",
+    link: "https://github.com/dronavallipranav/rust-obfuscator",
   },
   {
     title: "GameBoy Emulator - ",

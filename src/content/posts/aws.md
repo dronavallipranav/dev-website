@@ -4,7 +4,7 @@ author: Pranav Dronavalli
 image: /aws.jpg
 date: September 2023
 slug: migration-to-aws
-description: What inspired me to migrate from Netlify to AWS. The challnges I faced including a bug with a seemingly unsupported library in AWS Lambda, as well as everything I learned through the process.
+description: What inspired me to migrate from Netlify to AWS. The challenges I faced including a bug with a seemingly unsupported library in AWS Lambda, as well as everything I learned through the process.
 ---
 
 # Migrating My Portfolio from Netlify to AWS

@@ -48,7 +48,7 @@ export const handler = async function (event, context) {
 
     const txtPath = `./data.txt`;
     const VECTOR_STORE_PATH = `data.index`;
-    const model = new OpenAI({ model: "gpt-3.5-turbo-instruct" });
+    const model = new OpenAI({ model: "gpt-4o" });
 
     let vectorStore;
     if (fs.existsSync(VECTOR_STORE_PATH)) {

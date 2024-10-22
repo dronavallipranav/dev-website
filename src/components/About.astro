@@ -84,6 +84,12 @@ import projects from '../data/projects.js';
                   <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden lg:block">{project.description}</p>
               <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden md:block lg:hidden">{project.description.substring(0, 100)}...</p>
               <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden sm:block lg:hidden md:hidden">{project.description.substring(0, 40)}...</p>
+              {project.title === "Rust Obfuscator" && project.liveData && (
+                            <p class="dark:text-gray-400 font-bold dark:text-opacity-70 text-gray-600">{project.liveData}
+                            <img src="/download.svg" alt="Download Icon" class="inline dark:hidden align-middle ml-2 h-6 w-6" />
+                            </p>
+                            <p class="text-sm text-gray-500 dark:text-gray-300 mt-1">Downloads All Time</p>
+                        )}
               </div>
           </div>
       </a>

@@ -11,10 +11,13 @@ Pranav's favorite actor is Ryan Gosling.
 Pranav has many favorite movies, but his favorite Star Wars movie is Revenge of The Sith.
 Pranav's favorite food is Chicken Alfredo, or Pizza.
 Pranav's favorite fast food chain is Chick-Fil-A.
+Pranav is currently a software engineer at Capital One.
+Pranav was once tarnished but now he is Elden Lord.
 Pranav loves all types of animals, but especially cats.
 In his free time, Pranav loves to code, play chess, or listen to music.
 Pranav is a Junior at UW-Madison majoring in Computer Science and Math.
 Pranav's favorite courses at Madison have been Discrete Math, Algorithms, and Machine Organization.
+Pranav also likes Bea although he fears they might be AI generated.
 Pranav is currently watching The Bear on Hulu
 Pranav is pretty relaxed, and you can talk to him about almost anything random.
 Pranav's favorite languages to work with are Java (which he is most comfortable with), Python (which he thinks is the easiest to use), C++ (which he admires the freedom of), I also am interested in learning OCaml and Rust as they seem really cool although I am not very good with them yet.(Which he think is really cool and is currently trying to learn).

@@ -3,12 +3,6 @@ import { getCollection } from "astro:content";
 import projects from "../data/projects.js";
 import Layout from '../layouts/Layout.astro';
 
-for (const project of projects) {
-  if (project.title === "Rust Obfuscator" && project.liveData) {
-    project.liveData = await project.liveData;
-  }
-}
-
 ---
 <Layout>
     <section id="blogs" class="flex overflow-x-hidden pt-5">
@@ -29,10 +23,10 @@ for (const project of projects) {
                         <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden lg:block">{project.description}</p>
                     <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden md:block lg:hidden">{project.description.substring(0, 100)}...</p>
                     <p class="dark:text-gray-400 dark:text-opacity:70 text-gray-600 hidden sm:block lg:hidden md:hidden">{project.description.substring(0, 40)}...</p>
-                    {project.title === "Rust Obfuscator" && project.liveData && (
-                            <p class="dark:text-gray-400 font-bold dark:text-opacity-70 text-gray-600">{project.liveData}
-                            <img src="/download.svg" alt="Download Icon" class="inline dark:hidden align-middle ml-2 h-6 w-6" />
+                    {project.title === "Rust Obfuscator"  && (
+                            <p class="dark:text-gray-400 inline font-bold dark:text-opacity-70 text-gray-600 download-count"> ...
                             </p>
+                            <img src="/download.svg" alt="Download Icon" class="inline dark:hidden align-middle ml-2 h-6 w-6" />
                             <p class="text-sm text-gray-500 dark:text-gray-300 mt-1">Downloads All Time</p>
                         )}
                     </div>
@@ -41,5 +35,6 @@ for (const project of projects) {
         ))}
     </div>
 </div>
+<script src="/scripts/fetchDownloads.js", is:inline></script>
 </section>
 </Layout>

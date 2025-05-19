@@ -17,7 +17,7 @@ I created a ticket on Neltify Support to ask for help with the bug. While they a
 
 ## AWS Lambda and hnswlib-node
 
-My backend was having trouble with Lambda, even though I had the hnswlib-node package installed and uploaded, my code was having trouble importing the package in the Lambda environment. After doing research on the topic, I found some people having common issues on github and the issues weren't yet closed meaning that there wasn't one verified solution to the problem. It did seem like Amazon was aware of this issue and an issue with the Faiss library aswell and aim to add support on Lambda to eventually problems. 
+My backend was having trouble with Lambda, even though I had the hnswlib-node package installed and uploaded, my code was having trouble importing the package in the Lambda environment. After doing research on the topic, I found some people having common issues on github and the issues weren't yet closed meaning that there wasn't one verified solution to the problem. It did seem like Amazon was aware of this issue and they said they aim to add support on Lambda to eventually fix the problems. 
 
 My theory after learning a little more is that the the natively compiled hnswlib-node binary was not working seamlessly with AWS Lambda, despite using the same X86 ISA and the same Node runtime. I did manage to find a workaround to the issue through containzering my backend on ECR and using Lambda to execute the image. 
 
@@ -30,6 +30,6 @@ After getting my backend situated, I started the process to transfer my domain o
 
 I used AWS API Gateway to act as a trigger for my Lambda function, providing an endpoint for my frontend. It was relatively simple but introduced some CORS issues on API Gateway (which I managed to resolve relatively quickly) to CORS issues with preflight request complications my Lambda and CloudFront.
 
-After doing more research, I found that CloudFront caching settings was stripping my CORS headers, as well as the Lambda function timing out, were the real problems behind my CORS errors. Disabling caching seemed to fix the problem, but this is pretty inefficent and I plan on simply whitelisting the CORS headers in the future. Tweaking the Lambda timeout was the final fix and resulted in a fully connected functional website hosted on AWS. Seeing PranavBot functional was incredibly satisfying. 
+After doing more research, I found that CloudFront caching settings was stripping my CORS headers, as well as the Lambda function timing out, were the real problems behind my CORS errors. Disabling caching seemed to fix the problem, but this is pretty inefficent and I had to whitelist the CORS headers. Tweaking the Lambda timeout to give ample time for the llm was the final fix for the chatbot and my website. Seeing PranavBot functional was incredibly satisfying. 
 
-With everything in place, I integrated a GitHub Action to automatically build and deploy my content to the S3 bucket. The migration to AWS was finally complete.
+After that, I integrated a GitHub Action to automatically build and deploy my content to the S3 bucketand my migration was finally complete.

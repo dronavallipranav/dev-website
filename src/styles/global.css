@@ -2,6 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root { color-scheme: light; }
+:root.dark { color-scheme: dark; }
+
 @media (max-width: 1024px) {
     aside.navbar {
         transform: translateX(-100%);

@@ -118,91 +118,94 @@ import projects from '../data/projects.js';
         </a>
       ))}
   
-  <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 mt-2 sm:text-4xl text-3xl mb-4 font-medium text-black pt-2">
+  <h2 class="title-font dark:text-gray-100 dark:text-opacity-80 mt-2 sm:text-4xl text-3xl mb-6 font-medium text-black pt-2">
     PranavBot
   </h2>
-  <h4 class="title-font dark:text-gray-100 dark:text-opacity-80 sm:text-xl text-lg mb-4 font-medium text-black">
-    Powered by OpenAI and LangChain
-  </h4>
-  <div 
-      class="block w-full max-w-2xl mb-8 mt-4 dark:bg-containerGray shadow-lg transform transition-transform duration-300"
-  >
-    <div class="flex dark:bg-containerGray bg-gray-50 px-2 py-4 mt-4 mb-2 rounded-xl overflow-hidden">
-        <div class="w-full p-6">
-            <h3 class="text-xl font-semibold dark:text-opacity-80 dark:text-titlePurple mb-2">PranavBot:</h3>
-            <p class="text-lg dark:text-opacity-70 dark:text-gray-300">
-                <span id="langchain-text">Ask me anything about Pranav, and I'll assist you to the best of my capability!</span>
-            </p>
-            <div id="loading-div" class="hidden w-12 h-12">
-              <img src="load.gif" alt="Loading..." />
-            </div>
+
+  <div class="w-full max-w-2xl mb-8 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white dark:bg-containerGray shadow-lg">
+    <div class="p-5">
+      <div class="flex items-start space-x-3">
+        <div class="w-9 h-9 flex-shrink-0 rounded-full bg-gray-100 dark:bg-lighterGray overflow-hidden">
+          <img src="/robot.png" alt="PranavBot" class="w-full h-full object-cover" />
         </div>
+        <div class="flex-1 min-w-0">
+          <p id="langchain-text" class="text-base leading-relaxed text-gray-700 dark:text-gray-300 dark:text-opacity-80">
+            Ask me anything about Pranav, and I'll assist you to the best of my capability!
+          </p>
+          <div id="loading-div" class="hidden items-center space-x-1 mt-2">
+            <span class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 animate-bounce" style="animation-delay: 0s"></span>
+            <span class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 animate-bounce" style="animation-delay: 0.15s"></span>
+            <span class="w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500 animate-bounce" style="animation-delay: 0.3s"></span>
+          </div>
+        </div>
+      </div>
     </div>
 
-  
-<div class="chat-bubble w-full">
-  <div class="chat-bubble-content">
-    <div class="flex items-center mt-2 mr-2 mb-2 space-x-2">
-      <div class="w-10 h-10 ml-2 rounded-full bg-gray-50 dark:bg-containerGray"><img src = "/robot.png"></div>
-      <input 
-        id="user-question" 
-        class="w-full border dark:bg-containerGray dark:text-gray-200 dark:text-opacity-90 rounded-md p-2" 
-        type="text" 
-        placeholder="What does Pranav like?"
+    <form id="chat-form" class="flex items-center gap-2 border-t border-gray-200 dark:border-gray-800 p-3 bg-gray-50 dark:bg-lighterGray">
+      <input
+        id="user-question"
+        type="text"
+        autocomplete="off"
+        placeholder="Ask about Pranav..."
+        class="flex-1 bg-transparent px-3 py-2 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none"
+      />
+      <button
+        id="fetch-langchain-response"
+        type="submit"
+        class="px-4 py-2 rounded-md text-sm font-medium bg-gray-800 text-white hover:bg-black dark:bg-byz dark:hover:bg-gray-700 focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-    </div>
+        Send
+      </button>
+    </form>
   </div>
-</div>
-</div>
-
-  
-  <button 
-    id="fetch-langchain-response" 
-    class="text-lg px-6 py-2 bg-gray-700 text-white rounded-md mt-2 hover:bg-gray-800 py-2 dark:bg-byz dark:hover:bg-containerGray dark:hover:text-white dark:text-white dark:text-opacity-90 transition-transform duration-300 ease-in-out transform shadow-lg hover:shadow-xl mt-4"
-  >
-    Ask Anything About Me
-  </button>
 
 
 
 </div>
 </div>
-    <script>
-    document.getElementById('fetch-langchain-response').addEventListener('click', async () => {
-      const question = document.getElementById('user-question').value;
-      
-      if (!question) {
-        alert('Please enter a question.');
-        return;
-      }
+    <script is:inline>
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('user-question');
+    const button = document.getElementById('fetch-langchain-response');
+    const responseText = document.getElementById('langchain-text');
+    const loadingDiv = document.getElementById('loading-div');
 
-      document.getElementById('langchain-text').textContent = "";
-      document.getElementById('loading-div').classList.remove('hidden');
-    
-      const requestData = {
-        question: question
-      };
-    
+    const setLoading = (loading) => {
+      button.disabled = loading;
+      input.disabled = loading;
+      loadingDiv.classList.toggle('hidden', !loading);
+      loadingDiv.classList.toggle('flex', loading);
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const question = input.value.trim();
+      if (!question) return;
+
+      responseText.textContent = '';
+      setLoading(true);
+
       try {
         const response = await fetch("https://jtd1lexbk4.execute-api.us-east-2.amazonaws.com/default/askContainer", {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(requestData)
-});
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question }),
+        });
 
-    
         if (response.ok) {
           const data = await response.json();
-          document.getElementById('loading-div').classList.add('hidden');
-          document.getElementById('langchain-text').textContent = data.text;
-          document.getElementById('langchain-response').classList.remove('hidden');
+          responseText.textContent = data.text;
         } else {
+          responseText.textContent = "Sorry, something went wrong. Please try again.";
           console.error("Error fetching langchain response:", await response.text());
         }
       } catch (error) {
+        responseText.textContent = "Sorry, something went wrong. Please try again.";
         console.error("Error:", error);
+      } finally {
+        setLoading(false);
+        input.value = '';
+        input.focus();
       }
     });
     </script>

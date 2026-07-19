@@ -21,6 +21,11 @@
   </style>
 
 <script is:inline>
+    const setThemeColor = (isDark) => {
+        const meta = document.getElementById("theme-color-meta");
+        if (meta) meta.setAttribute("content", isDark ? "#0f0f0f" : "#f9fafb");
+    };
+
     const theme = (() => {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme-mode')) {
         return localStorage.getItem('theme-mode');
@@ -32,6 +37,7 @@
 if (theme === 'dark') {
     document.documentElement.classList.add('dark');
 }
+setThemeColor(theme === 'dark');
 
 window.localStorage.setItem('theme-mode', theme);
 
@@ -41,6 +47,7 @@ const handleToggleClick = () => {
 
     const isDark = element.classList.contains("dark");
     localStorage.setItem("theme-mode", isDark ? "dark" : "light");
+    setThemeColor(isDark);
 }
 
 document.getElementById("themeToggle").addEventListener("click", handleToggleClick);

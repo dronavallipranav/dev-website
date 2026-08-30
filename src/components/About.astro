@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { getCollection } from "astro:content";
-let postEntries = await getCollection("posts");
+let postEntries = (await getCollection("posts")).filter((post) => !post.data.draft);
 const text = "Hi, I'm Pranav.";
 const letters = [...text];
 const subheader = "Software Engineer";

@@ -24,9 +24,9 @@ let projects = [
     link: "https://devpost.com/software/swapper-8u4rq0",
   },
   {
-    title: "GameBoy Emulator - ",
+    title: "GameBoy Emulator",
     description: "Take a look at the current state of my Emulator",
-    status: "IN PROGRESS",
+    status: "",
     image: "/gameboy.jpeg",
     link: "https://github.com/dronavallipranav/GBEmulator",
   },
